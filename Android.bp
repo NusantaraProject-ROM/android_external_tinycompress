@@ -20,6 +20,13 @@ cc_library_shared {
     header_libs: [
         "generated_kernel_headers",
     ],
+    product_variables: {
+        du: {
+            supports_extended_compress_format: {
+                cflags: ["-DENABLE_EXTENDED_COMPRESS_FORMAT"],
+            },
+        },
+    },
 }
 
 cc_binary {
